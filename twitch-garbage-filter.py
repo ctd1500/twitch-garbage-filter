@@ -7,7 +7,7 @@ import hexchat
 def rawgarbage_cb(word, word_eol, userdata):
     if word[1] == "USERSTATE" or word[1] == "ROOMSTATE":
         # print("RAW: {}".format(word))
-        return hexchat.EAT_ALL
+        return hexchat.EAT_HEXCHAT
 
 hexchat.hook_server("RAW LINE", rawgarbage_cb)
 
